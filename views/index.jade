@@ -1,5 +1,33 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
+  div.carousel.slide(id="featuredCarousel", data-ride="carousel")
+    ol.carousel-indicators
+      li.active(data-target="#featuredCarousel", data-slide-to="0")
+      li(data-target="#featuredCarousel", data-slide-to="1")
+      li(data-target="#featuredCarousel", data-slide-to="2")
+    div.carousel-inner(role="listbox")
+      div.item.active
+        img(src="/images/SSEPortalSlide1.png")
+      div.item
+        img(src="/images/SSEPortalSlide2.png")
+      div.item
+        img(src="/images/SSEPortalSlide3.png")
+  div.panel.panel-info
+    div.panel-heading
+      span.glyphicon.glyphicon-bullhorn(style="float:left; margin-right:5px;")
+      h3.panel-title From The Cirrus Team
+    div.panel-body Welcome to the MyCirrus open beta! Please feel free to reach out if you find any bugs or issues with the product!
+  div.panel.panel-success
+    div.panel-heading
+      span.glyphicon.glyphicon-heart-empty(style="float:left;margin-right:5px;")
+      h3.panel-title My Fitness Data (last sync @ 8:30am)
+    div.panel-body
+      img(src="/images/FitBit2.jpg" width="100%")
+  div.panel.panel-info
+    div.panel-heading
+      h3.panel-title myCirrus Community Matcher (Not Yet Joined)
+    div.panel-body 
+      a(href="/newForm")
+        button.btn.btn-lg.btn-warning(type="button") Request Community Matching  
+          span.glyphicon.glyphicon-send

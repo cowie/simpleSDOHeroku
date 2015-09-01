@@ -1,0 +1,25 @@
+extends layout
+
+block content
+  div.panel.panel-primary
+    div.panel-heading
+      h3.panel-title Please enter your information below for the request!
+    div.panel-body
+      form(method="post", action="/insertData")
+
+
+        div.input-group
+          input.form-control(type="text", name="first_name", placeholder="First Name")
+        div.input-group
+          input.form-control(type="text", name="last_name", placeholder="Last Name")
+        div.input-group
+          input.form-control(type="text", name="phone", placeholder="Phone #")
+        div.input-group
+          input.form-control(type="text", name="city", placeholder="City")
+        div.input-group
+          input.form-control(type="text", name="state", placeholder="State")
+        div.input-group
+          input.form-control(type="text", name="item_of_interest", placeholder="IofI")
+        div.input-group
+          input.form-control(type="text", name="type", placeholder="type")
+        button.btn.btn-primary(type="submit") Submit Your Request

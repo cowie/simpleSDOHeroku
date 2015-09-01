@@ -1,8 +1,12 @@
 body {
-  padding: 50px;
+  padding-top: 70px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
 a {
   color: #00B7FF;
+}
+
+a.navbar-brand{
+	padding:7px 15px;
 }
