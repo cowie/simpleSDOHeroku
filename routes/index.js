@@ -7,7 +7,7 @@ var conString = process.env.DATABASE_URL || 'postgres://cdegour:@localhost/sHo';
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Welcome!', header:'' });
+  res.render('index', { title: 'Welcome!', header:'', success:true, highrisk:false});
 });
 
 
