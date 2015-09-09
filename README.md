@@ -26,7 +26,10 @@ Setup
 ### Install
 At this point, you can either start the demo now, and show the power of instant deployment, or run this step ahead of time. 
 * Hit the Heroku Deploy button above to create a net new Heroku app, no command line required.
-What you're doing right now is the equivilant of a 'git push heroku master' command, but instead of deploying from code on your local machine, you're deploying direct from my code here. This is a step most devs would take after doing initial testing and dev on their local box and it's time to get started testing in a real environment.
+What you're doing right now is the equivilant of a 'git push heroku master' command, but instead of deploying from code on your local machine, you're deploying direct from my code here. This is a step most devs would take after doing initial testing and dev on their local box and it's time to get started testing in a real environment. Name your app something you'll remember.
+* Click the 'view app' button at the bottom - this is your dashboard for the app. Remember this. If you're going to be tight on time, you can do the Heroku Connect configuration bit of the demo ahead of time to deal with setup. The value of Heroku here is an instant deployment, rapid scaling, and point and click simple integration with Salesforce. If you do the setup ahead of time, it saves you a good minute or two, but don't forget to mention all that, otherwise it'll just look like another webpage.
+
+
 
 (OPTIONAL)
 * Clone this repository locally, use Heroku Toolbelt to push to Heroku.
@@ -36,7 +39,23 @@ Looks cooler, only do it if you know what you're doing.
 * Once your Heroku app is up and running, go check it out, preferably from a mobile device. 
 * Before doing anything in it, go to dashboard.heroku.com and log in. Here you'll see your apps.
 * Click on the name of the app you just deployed. If you're new to Heroku, its the only one, so that's easy.
-* Where it says Add-ons, type in Heroku Connect, and select it. In the box that pops up, hit 'Provision'
+
+(HC)
+* Click on 'Begin Setup' to complete provisioning.
+* Click 'Next' (On this page, you're naming the schema in the Heroku database for the Salesforce data. Salesforce is default, and that looks good enough to me.)
+* Click "Authorize" - You're now doing an oAuth login into Salesforce so it can get to your datas, your precious, precious datas. Log in and hit allow.
+* BOOM. You're set up. Time to create a mapping. You do this by clicking on "Create Mapping". 
+* For the demo, click on Case. Before mapping fields, at the top, make SURE you check 'Write to Salesforce any updates to your database'. I'd also suggest listening for updates using the Streaming API, but that wont affect your demo, just sound cool.
+* Map the following fields (You can do more, but at the very least, do these)
+** ContactID, Origin, Patient__c, Priority, Subject
+** Click Save
+* You've now mapped your databases. No shit, you just set up bidirectional sync with Salesforce like it was nothing. You also deployed an app too, but I'm trying not to overload you with happiness.
+
+(Actual Demo)
+* Now it's actually time to demo the app. If you're short on time, you can do the (HC) part early, and just show this. If you do that - 
+* Open your app, it's whatever-you-named-it.herokuapp.com. You can do this on your phone for extra points or on your browser.
+* 
+
 
 * Click/tap on the "Report Symptoms" button to go to the form asking for information.
 Selecting any of the buttons will add you to a high risk category and make some specific things happen.
