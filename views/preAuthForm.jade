@@ -1,0 +1,51 @@
+extends layout
+
+block content
+  div.alert.alert-primary
+      h3.panel-title Welcome, please check your symptoms below!
+
+  div.container
+    form(method="post", action="/insertData")
+      div.col-xs-12.col-md-4.col-lg-4
+        table.table
+          thead
+            tr
+              th Flu Symptoms
+          tbody
+            tr
+              td Fever or Chills
+            tr
+              td Cough
+            tr
+              td Sore Throat
+            tr
+              td Runny/Suffy Nose
+            tr
+              td Muscle or Body Aches
+        
+
+      div.col-xs-12.col-md-4.col-lg-4(style="margin-top:15px;")
+          div.row(style="margin-bottom:5px;border-bottom:2px solid black;")
+            h3.panel-title Do Any Of These Currently Apply To You?
+            div#buttonHolder.container(data-toggle="buttons")
+              label.btn.btn-primary
+                input(name="over65" type="checkbox" autocomplete="off")
+                span Over 65+
+              label.btn.btn-primary
+                input(name="chronic" type="checkbox" autocomplete="off")
+                span Chronic Illnesses
+              br
+              label.btn.btn-primary
+                input(name="pregnant" type="checkbox" autocomplete="off")
+                span Pregnancy
+              label.btn.btn-primary
+                input(name="child" type="checkbox" autocomplete="off")
+                span Young Child(<12)    
+          div.row
+            button.btn.btn-info.col-xs-8(type="submit") Submit Request
+
+          
+      
+
+
+

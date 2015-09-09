@@ -22,3 +22,7 @@ a.navbar-brand{
 .togglebtns label{
 	margin: 5px 5px 5px 5px;
 }
+
+#buttonHolder .btn{
+	margin:5px;
+}
