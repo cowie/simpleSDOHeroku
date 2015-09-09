@@ -49,7 +49,7 @@ router.post('/insertData', function(req, res, next){
 			}
 		}
 	});
-	res.render("index", {title:"thanks!", header:"", success=true, highrisk=true});
+	res.render("index", {title:"thanks!", header:"", success:true, highrisk:true});
 });
 
 module.exports = router;
