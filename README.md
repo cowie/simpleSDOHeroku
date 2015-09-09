@@ -28,6 +28,7 @@ At this point, you can either start the demo now, and show the power of instant 
 * Hit the Heroku Deploy button above to create a net new Heroku app, no command line required.
 What you're doing right now is the equivilant of a 'git push heroku master' command, but instead of deploying from code on your local machine, you're deploying direct from my code here. This is a step most devs would take after doing initial testing and dev on their local box and it's time to get started testing in a real environment. Name your app something you'll remember.
 * Click the 'view app' button at the bottom - this is your dashboard for the app. Remember this. If you're going to be tight on time, you can do the Heroku Connect configuration bit of the demo ahead of time to deal with setup. The value of Heroku here is an instant deployment, rapid scaling, and point and click simple integration with Salesforce. If you do the setup ahead of time, it saves you a good minute or two, but don't forget to mention all that, otherwise it'll just look like another webpage.
+* 
 
 
 
@@ -53,15 +54,15 @@ Looks cooler, only do it if you know what you're doing.
 
 (Actual Demo)
 * Now it's actually time to demo the app. If you're short on time, you can do the (HC) part early, and just show this. If you do that - 
+* Open up Salesforce. Show Helen Highrisk, do whatever demoy stuff you wanna do here before showing this off. Make note of her 'Cases' related list.
 * Open your app, it's whatever-you-named-it.herokuapp.com. You can do this on your phone for extra points or on your browser.
 * This app is simulating a known user - Helen Highrisk, using information drawn from SFDC and Heroku. It could be a general unauthenticated page too, but just go with it here.
 * Note the 'Influenza Breakout' bit at the top, click on 'Report Symptoms'. The rest of the page is fluff.
 * Since we know who Helen is, we don't need to ask a bunch of identifying information, but for Influenza we want to doublecheck a few qualifying factors that would make her high risk. 
 * Tap one or more of the high risk elements, then hit submit request.
+* Index page will change, showing that stuff's been sent.
 
+(HC)
+* Open up your Heroku Connect dashboard, and wait 10 seconds for the poll.
+* Show Helen Highrisk's cases - You've now got a new one about the Influenza Outbreak. 
 
-
-* Click/tap on the "Report Symptoms" button to go to the form asking for information.
-Selecting any of the buttons will add you to a high risk category and make some specific things happen.
-
-* If you are high risk, the code will push the new record into the database meant to map with Salesforce. Good things will happen.
