@@ -31,8 +31,8 @@ router.post('/insertData', function(req, res, next){
 			if(req.body.over65 || req.body.chronic || req.body.pregnant || req.body.child){
 				//add salesforce logic here
 				console.log("detected high-risk patient, forwarding to critical care workflow");
-				client.query('INSERT INTO salesforce.case("Patient__c", "Contactid", "Subject", Origin", "Priority") values ($1, $2, $3, $4, $5) returning ID', 
-					["00361000002hwzt", "00361000002hwzt", "Influenza Outbreak", "Web", "High"], 
+				client.query('INSERT INTO salesforce.case("patient__c", "contactid", "subject", "origin", "priority") values ($1,$2,$3,$4,$5) returning id', 
+					["00361000002hwzt", "00361000002hwzt", "influenza Outbreak", "Web", "High"],  
 					function(err, result){ 
 						if(err){console.error(err);res.send('there was an error inserting to table:' + err + ' <br/>' + helenID);}
 						else{console.log('inserted data, all is well');res.render('index', {title:"thanks!", header:"", success:true, highrisk:true});}
