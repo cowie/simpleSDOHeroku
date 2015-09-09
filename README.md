@@ -29,10 +29,12 @@ Setup
 ### Install
 At this point, you can either start the demo now, and show the power of instant deployment, or run this step ahead of time. 
 * Hit the Heroku Deploy button above to create a net new Heroku app, no command line required.
-What you're doing right now is the equivilant of a 'git push heroku master' command, but instead of deploying from code on your local machine, you're deploying direct from my code here. This is a step most devs would take after doing initial testing and dev on their local box and it's time to get started testing in a real environment. Name your app something you'll remember.
+* Name your app something you'll remember if you've got a bunch of em. 
+* Go into your CRM for Hospitals Demo Org, and find the Helen Highrisk contact ID. Copy this, and paste it in the box on the heroku page under Config Variables called 'HELEN_HIGHRISK_ID'. 
+* Click the 'Deploy for Free' button at the bottom to start the deployment.
 * Click the 'view app' button at the bottom - this is your dashboard for the app. Remember this. If you're going to be tight on time, you can do the Heroku Connect configuration bit of the demo ahead of time to deal with setup. The value of Heroku here is an instant deployment, rapid scaling, and point and click simple integration with Salesforce. If you do the setup ahead of time, it saves you a good minute or two, but don't forget to mention all that, otherwise it'll just look like another webpage.
 
-
+What you're doing right now is the equivilant of a 'git push heroku master' command, but instead of deploying from code on your local machine, you're deploying direct from my code here. This is a step most devs would take after doing initial testing and dev on their local box and it's time to get started testing in a real environment. 
 
 
 (OPTIONAL)
@@ -40,11 +42,13 @@ What you're doing right now is the equivilant of a 'git push heroku master' comm
 Looks cooler, only do it if you know what you're doing.
 
 ### Demo
+* Special Note: If you set this all up days ago and haven't run it since then, run your app once by going to whatever.herokuapp.com. For the free dynos, Heroku will sleep your app, causing a considerable lag time at the first run if it's been awhile. Trust me on this one.
+
 * Once your Heroku app is up and running, go check it out, preferably from a mobile device. 
 * Before doing anything in it, go to dashboard.heroku.com and log in. Here you'll see your apps.
 * Click on the name of the app you just deployed. If you're new to Heroku, its the only one, so that's easy.
 
-(HC)
+(HC - You can do this beforehand if you have a business user / lack of time)
 * Click on 'Begin Setup' to complete provisioning.
 * Click 'Next' (On this page, you're naming the schema in the Heroku database for the Salesforce data. Salesforce is default, and that looks good enough to me.)
 * Click "Authorize" - You're now doing an oAuth login into Salesforce so it can get to your datas, your precious, precious datas. Log in and hit allow.
@@ -71,3 +75,5 @@ Now I flip over to Helen Highrisk's point of view.
 * Open up your Heroku Connect dashboard, and wait 10 seconds for the poll.
 * Show Helen Highrisk's cases - You've now got a new one about the Influenza Outbreak. At this point, wire it to whatever workflows you'd like.
 
+## POST DEMO
+* I recommend highly you wipe out the heroku app you built for the demo, so you don't end up with 300 apps in your list and get confused in a future demo. 

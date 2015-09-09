@@ -3,7 +3,7 @@
 	"description": "A simple app that captures information from a form and sends to HerokuConnect in the event things are in place.",
 	"repository": "https://github.com/cowie/simpleHCForm",
 	"scripts":{
-		"postdeploy": "node init.js"
+		
 	},
 	"env":{
 		"HELEN_HIGHRISK_ID":{
