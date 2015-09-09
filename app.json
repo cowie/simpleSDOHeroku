@@ -8,11 +8,7 @@
 	"env":{
 		"HELEN_HIGHRISK_ID":{
 			"description":"Contact ID for Helen Highrisk in your org",
-			"value":"xxxxxxxxxxx"
-		},
-		"HEADER_URL":{
-			"description":"URL for image at top of pages",
-			"value":"/images/daHeader.png"
+			"value":""
 		}
 	},
 	"addons":[
