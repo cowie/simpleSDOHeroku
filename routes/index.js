@@ -3,7 +3,7 @@ var router = express.Router();
 
 var pg = require('pg');
 var conString = process.env.DATABASE_URL || 'postgres://cdegour:@localhost/sHoHealth';
-
+var helenID = process.env.HELEN_HIGHRISK_ID || 'badID';
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
@@ -13,11 +13,11 @@ router.get('/', function(req, res, next) {
 
 //form data
 router.get('/newForm', function(req, res, next){
-	res.render('newForm', {title: "newForm", header:''});
+	res.render('newForm', {title: helenID, header:''});
 });
 
 router.get('/preAuthForm', function(req,res,next){
-	res.render('preAuthForm', {title:"newForm2", header:''});
+	res.render('preAuthForm', {title:process.env.HELEN_HIGHRISK_ID, header:''});
 })
 
 //form post call
@@ -32,7 +32,7 @@ router.post('/insertData', function(req, res, next){
 				//add salesforce logic here
 				console.log("detected high-risk patient, forwarding to critical care workflow");
 				client.query('INSERT INTO salesforce.case("Patient__c", "Contactid", "Subject", Origin", "Priority") values ($1, $2, $3, $4, $5) returning ID', 
-					[process.env.HELEN_HIGHRISK_ID, process.env.HELEN_HIGHRISK_ID, "Influenza Outbreak", "Web", "High"], 
+					[helenID, helenID, "Influenza Outbreak", "Web", "High"], 
 					function(err, result){ 
 						if(err){console.error(err);res.send('there was an error inserting to table:' + err);}
 						else{console.log('inserted data, all is well');res.render('index', {title:"thanks!", header:"", success:true, highrisk:true});}
