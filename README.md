@@ -54,7 +54,11 @@ Looks cooler, only do it if you know what you're doing.
 (Actual Demo)
 * Now it's actually time to demo the app. If you're short on time, you can do the (HC) part early, and just show this. If you do that - 
 * Open your app, it's whatever-you-named-it.herokuapp.com. You can do this on your phone for extra points or on your browser.
-* 
+* This app is simulating a known user - Helen Highrisk, using information drawn from SFDC and Heroku. It could be a general unauthenticated page too, but just go with it here.
+* Note the 'Influenza Breakout' bit at the top, click on 'Report Symptoms'. The rest of the page is fluff.
+* Since we know who Helen is, we don't need to ask a bunch of identifying information, but for Influenza we want to doublecheck a few qualifying factors that would make her high risk. 
+* Tap one or more of the high risk elements, then hit submit request.
+
 
 
 * Click/tap on the "Report Symptoms" button to go to the form asking for information.

@@ -22,19 +22,11 @@ router.get('/preAuthForm', function(req,res,next){
 
 //form post call
 router.post('/insertData', function(req, res, next){
-	pg.conect(conString, function(err, client, done){
+	pg.connect(conString, function(err, client, done){
 		if(err){
 			console.error(err);res.send('error connecting to db:' + err);
 		}
 		else{
-			/*
-			client.query('INSERT INTO "possiblePatient"("first_name", "last_name", "phone", "city", "state") values ($1, $2, $3, $4, $5) returning ID',
-				[req.body.first_name, req.body.last_name, req.body.phone, req.body.city, req.body.state], 
-				function(err, result){
-					if(err){console.error(err);res.send('error inserting to request table:' + err);}
-					console.log("inserted data, 'salgood");
-			});
-*/
 
 			if(req.body.over65 || req.body.chronic || req.body.pregnant || req.body.child){
 				//add salesforce logic here
@@ -49,7 +41,7 @@ router.post('/insertData', function(req, res, next){
 			}
 		}
 	});
-	res.render("index", {title:"thanks!", header:"", success:true, highrisk:true});
+	res.render('index', {title:"thanks!", header:"", success:true, highrisk:true});
 });
 
 module.exports = router;
