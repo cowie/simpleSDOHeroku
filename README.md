@@ -1,9 +1,11 @@
+[![Deploy](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy?template=https://github.com/cowie/simpleMedHerokuDemo)
+
 Simple Demo Org - Heroku Connect (HLS/Medical Edition)
 ======================
 
-This is a straightforward demo to show off how you can combine the best of Heroku and Force.com into a multi-part App Cloud demo. This requires some flexibility and use of potentially non-free elements of Heroku, and is mainly for Salesforce SE's or for review. Deploying may impact your spend with Heroku if you're external, so reach out to your Salesforce/Heroku contacts for more information.
+This is a straightforward demo to show off how you can combine the best of Heroku and Force.com into a multi-part App Cloud demo. This requires some flexibility and use of potentially non-free elements of Heroku, and is mainly for Salesforce SE's - If you are a prospect/customer and would like to see this all in action, please reach out to your friendly neighborhood Salesforce representative.
 
-This will require a total of ZERO code to implement. Point and click, son. Components we need on Salesforce? Nada but the standard stuff. Components we need on Heroku? Postgres, Node, handful of node libraries, and Heroku Connect, most of which will autodeploy for us.
+This will require a total of ZERO code to implement. Point and click, son. Components we need on Salesforce? Nada but the standard stuff. Components we need on Heroku? Postgres, Node, handful of node libraries, and Heroku Connect, everything autodeploying.
 
 
 Script/Story
@@ -17,10 +19,11 @@ The integration and the workflow rules on the Salesforce side are all done throu
 Today, we're going to set up and deploy that application, along with wiring up the integration, in minutes.
 
 
+
 Setup
 -------------
 ### Prep
-* Get an SDO or Developer Edition spun up of Force.com
+* Get a copy of CRM for Hospitals Demo Org
 * Sign up for a Heroku license. 
 
 ### Install
@@ -28,7 +31,7 @@ At this point, you can either start the demo now, and show the power of instant 
 * Hit the Heroku Deploy button above to create a net new Heroku app, no command line required.
 What you're doing right now is the equivilant of a 'git push heroku master' command, but instead of deploying from code on your local machine, you're deploying direct from my code here. This is a step most devs would take after doing initial testing and dev on their local box and it's time to get started testing in a real environment. Name your app something you'll remember.
 * Click the 'view app' button at the bottom - this is your dashboard for the app. Remember this. If you're going to be tight on time, you can do the Heroku Connect configuration bit of the demo ahead of time to deal with setup. The value of Heroku here is an instant deployment, rapid scaling, and point and click simple integration with Salesforce. If you do the setup ahead of time, it saves you a good minute or two, but don't forget to mention all that, otherwise it'll just look like another webpage.
-* 
+
 
 
 
@@ -52,9 +55,11 @@ Looks cooler, only do it if you know what you're doing.
 ** Click Save
 * You've now mapped your databases. No shit, you just set up bidirectional sync with Salesforce like it was nothing. You also deployed an app too, but I'm trying not to overload you with happiness.
 
+
 (Actual Demo)
 * Now it's actually time to demo the app. If you're short on time, you can do the (HC) part early, and just show this. If you do that - 
 * Open up Salesforce. Show Helen Highrisk, do whatever demoy stuff you wanna do here before showing this off. Make note of her 'Cases' related list.
+Now I flip over to Helen Highrisk's point of view.
 * Open your app, it's whatever-you-named-it.herokuapp.com. You can do this on your phone for extra points or on your browser.
 * This app is simulating a known user - Helen Highrisk, using information drawn from SFDC and Heroku. It could be a general unauthenticated page too, but just go with it here.
 * Note the 'Influenza Breakout' bit at the top, click on 'Report Symptoms'. The rest of the page is fluff.
@@ -64,5 +69,5 @@ Looks cooler, only do it if you know what you're doing.
 
 (HC)
 * Open up your Heroku Connect dashboard, and wait 10 seconds for the poll.
-* Show Helen Highrisk's cases - You've now got a new one about the Influenza Outbreak. 
+* Show Helen Highrisk's cases - You've now got a new one about the Influenza Outbreak. At this point, wire it to whatever workflows you'd like.
 
