@@ -34,7 +34,7 @@ router.post('/insertData', function(req, res, next){
 				client.query('INSERT INTO salesforce.case("Patient__c", "Contactid", "Subject", Origin", "Priority") values ($1, $2, $3, $4, $5) returning ID', 
 					[helenID, helenID, "Influenza Outbreak", "Web", "High"], 
 					function(err, result){ 
-						if(err){console.error(err);res.send('there was an error inserting to table:' + err);}
+						if(err){console.error(err);res.send('there was an error inserting to table:' + err + ' <br/>' + helenID);}
 						else{console.log('inserted data, all is well');res.render('index', {title:"thanks!", header:"", success:true, highrisk:true});}
 					}
 				);
