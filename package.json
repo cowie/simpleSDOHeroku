@@ -1,5 +1,5 @@
 {
-  "name": "sHo",
+  "name": "sHoSDO",
   "version": "0.0.0",
   "private": true,
   "scripts": {
@@ -12,6 +12,7 @@
     "express": "~4.13.0",
     "jade": "~1.11.0",
     "morgan": "~1.6.1",
+    "path": "^0.12.7",
     "pg": "^4.4.1",
     "serve-favicon": "~2.3.0"
   }
