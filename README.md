@@ -18,7 +18,7 @@ The integration and the workflow rules on the Salesforce side are all done throu
 
 Today, we're going to set up and deploy that application, along with wiring up the integration, in minutes. No code, no command line, no joke.
 
- 
+ ###Disclaimer: This looks long, it actually isn't, it's just super detailed for you. Whole process ~5m.
 
 Setup
 -------------
