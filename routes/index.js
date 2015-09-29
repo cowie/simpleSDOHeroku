@@ -32,7 +32,7 @@ router.post('/newsletter', function(req, res, next){
 				[req.fname, req.lname, req.email],
 				function(err, result){
 					if(err){console.error(err);res.send('error inserting into the table: ' + err + '<br/>');}
-					else{console.log('inserted data, all is well');res.render('thankYou', {});}
+					else{console.log('inserted data, all is well');res.sendFile(path.join(__dirname+ '/../views/thankYou.html'));
 				}
 			);
 		}
