@@ -20,7 +20,7 @@ router.get('/thanks', function(req, res, next){
 	res.sendFile(path.join(__dirname+ '/../views/thankYou.html'));
 });
 
-router.post('/newsletter', function(req, res, next){
+router.post('/newsletterAdd', function(req, res, next){
 	//lets just save it into lead
 	pg.connect(conString, function(err, client, done){
 		if(err){
