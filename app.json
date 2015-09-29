@@ -6,10 +6,7 @@
 		
 	},
 	"env":{
-		"HELEN_HIGHRISK_ID":{
-			"description":"Contact ID for Helen Highrisk in your org",
-			"value":""
-		}
+		
 	},
 	"addons":[
 		"heroku-postgresql:hobby-dev",

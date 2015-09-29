@@ -14,7 +14,11 @@ router.get('/', function(req, res, next) {
 
 router.get('/', function(req, res, next){
 	res.sendFile(path.join(__dirname + '/../views/index.html'));
-})
+});
+
+router.get('/thanks', function(req, res, next){
+	res.sendFile(path.join(__dirname+ '/../views/thankYou.html'));
+});
 
 router.post('/newsletter', function(req, res, next){
 	//lets just save it into lead
