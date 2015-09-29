@@ -36,6 +36,8 @@ router.post('/newsletter', function(req, res, next){
 			
 				}
 			);
+		}
+	});
 });
 
 
