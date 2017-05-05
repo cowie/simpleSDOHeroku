@@ -3,6 +3,8 @@ var router = express.Router();
 var path = require('path');
 
 var pg = require('pg');
+pg.defaults.ssl = true;
+
 var conString = process.env.DATABASE_URL || 'postgres://cdegour:@localhost/sHoHealth';
 
 router.get('/', function(req, res, next){
