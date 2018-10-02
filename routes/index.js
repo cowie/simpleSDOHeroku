@@ -35,7 +35,7 @@ router.post('/candidateAdd', (req, res, next) => {
           res.send('problem going into the table: ' + qerr + '<br/>');
         } else {
           console.log('insert successful');
-          res.sendFild(path.join(__dirname+'/../views/thankYou.html'));
+          res.sendFile(path.join(__dirname+'/../views/thankYou.html'));
         }
       });
   });
