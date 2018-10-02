@@ -28,8 +28,8 @@ router.get('/thanks', function(req, res, next){
 router.post('/candidateAdd', (req, res, next) => {
   pool.connect((err, client, done) => {
     if (err) throw err;
-    client.query('INSERT INTO "salesforce"."candidate__c"("youtube_video_id__c", "email_address__c", "first_name__c", "last_name__c", "twitter_handle__c") values($1, $2, $3, $4, $5) returning id',
-      [req.body.youtubeID, req.body.email, req.body.fname, req.body.lname, req.body.twitter], (qerr, qres) => {
+    client.query('INSERT INTO "salesforce"."candidate__c"("youtube_video_id__c", "email_address__c", "first_name__c", "last_name__c", "twitter_handle__c", "name") values($1, $2, $3, $4, $5, $6) returning id',
+      [req.body.youtubeID, req.body.email, req.body.fname, req.body.lname, req.body.twitter, req.body.fname + ' ' + req.body.lname], (qerr, qres) => {
         if (qerr) {
           console.error(qerr);
           res.send('problem going into the table: ' + qerr + '<br/>');
