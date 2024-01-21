@@ -9,7 +9,15 @@
 		
 	},
 	"addons":[
-		"heroku-postgresql:hobby-dev",
+		"heroku-postgresql:mini",
 		"herokuconnect:demo"
-	]
+	],
+	"environments": {
+		"review": {
+			"addons": ["heroku-postgresql:mini"]
+		},
+		"test": {
+			"addons": ["heroku-postgresql:mini"]
+		}
+	}
 }
