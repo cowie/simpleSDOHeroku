@@ -10,7 +10,8 @@
 	},
 	"addons":[
 		"heroku-postgresql:mini",
-		"herokuconnect:demo"
+		"herokuconnect:demo",
+		"papertrail:choklad"
 	],
 	"environments": {
 		"review": {
